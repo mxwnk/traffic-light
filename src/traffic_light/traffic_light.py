@@ -5,7 +5,7 @@ if not use_fake_traffic_light:
     import RPi.GPIO as GPIO
 
     GPIO.setmode(GPIO.BCM)
-    GPIO.setwarning(False)
+    GPIO.setwarnings(False)
     GPIO.setup(gpio_green, GPIO.OUT)
     GPIO.setup(gpio_yellow, GPIO.OUT)
     GPIO.setup(gpio_red, GPIO.OUT)
