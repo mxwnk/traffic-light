@@ -24,7 +24,8 @@ def update_traffic_light():
 
         schedule_update()
     except Exception as e:
-        print("Error updating traffig light:" + e)
+        print(e)
+        traffic_light.display_error(e)
 
 
 def schedule_update():
@@ -34,4 +35,5 @@ def schedule_update():
 schedule_update()
 
 print("Start Jenkins Traffic Light")
+update_traffic_light()
 scheduler.run()
