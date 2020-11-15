@@ -1,13 +1,19 @@
+from ..logger import print_message
+
+
 class FakeTrafficLight:
 
     def display_green(self):
-        print('display green')
+        self.__print('Green')
 
     def display_yellow(self):
-        print('display yellow')
+        self.__print('Yellow')
 
     def display_red(self):
-        print('display red')
+        self.__print('Red')
 
     def display_error(self, error):
-        print(error)
+        self.__print(error)
+
+    def __print(self, msg):
+        print_message('FakeTrafficLight: ' + msg)
