@@ -15,6 +15,8 @@ if not use_fake_traffic_light:
 
 
 class TrafficLight:
+    all_off = {'green': off, 'yellow': off, 'red': off}
+    all_on = {'green': on, 'yellow': on, 'red': on}
 
     def display_green(self):
         set_traffic_light({'green': on, 'yellow': off, 'red': off})
@@ -26,17 +28,14 @@ class TrafficLight:
         set_traffic_light({'green': on, 'yellow': off, 'red': off})
 
     def display_error(self):
-        all_on = {'green': on, 'yellow': on, 'red': on}
-        flash(5, set_traffic_light, all_on)
-        set_traffic_light(all_on)
+        self.flash(5, self.all_on)
 
-
-def flash(times: int, fn, *args):
-    for x in range(times):
-        fn(args)
-        time.sleep(1)
-        set_traffic_light({'green': off, 'yellow': off, 'red': off})
-        time.sleep(1)
+    def flash(self, times: int, light):
+        for x in range(times):
+            set_traffic_light(self.all_off)
+            time.sleep(1)
+            set_traffic_light(light)
+            time.sleep(1)
 
 
 def set_traffic_light(light):
