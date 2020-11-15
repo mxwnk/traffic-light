@@ -35,6 +35,5 @@ def schedule_update():
 
 
 print_message("---- Start Traffic Light Monitor ----")
-schedule_update()
 update_traffic_light()
 scheduler.run()
