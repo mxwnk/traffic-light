@@ -2,6 +2,6 @@ from enum import Enum
 
 
 class BuildStatus(Enum):
-    GREEN = 1
-    YELLOW = 2
-    RED = 3
+    OK = 1
+    BUILDING = 2
+    FAILED = 3
