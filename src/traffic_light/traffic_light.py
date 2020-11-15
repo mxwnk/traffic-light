@@ -28,9 +28,12 @@ class TrafficLight:
         set_traffic_light({'green': on, 'yellow': off, 'red': off})
 
     def display_error(self):
-        self.flash(5, self.all_on)
+        self.flash_all()
 
-    def flash(self, times: int, light):
+    def flash_all(self):
+        self.__flash(5, self.all_on)
+
+    def __flash(self, times: int, light):
         for x in range(times):
             set_traffic_light(self.all_off)
             time.sleep(1)
