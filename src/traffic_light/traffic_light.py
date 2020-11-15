@@ -40,6 +40,6 @@ def flash(times: int, fn, *args):
 
 
 def set_traffic_light(light):
-    GPIO.output(gpio_green, light.green)
-    GPIO.output(gpio_yellow, light.yellow)
-    GPIO.output(gpio_red, light.red)
+    GPIO.output(gpio_green, light['green'])
+    GPIO.output(gpio_yellow, light['yellow'])
+    GPIO.output(gpio_red, light['red'])
