@@ -12,6 +12,9 @@ if not use_fake_traffic_light:
 
     on = GPIO.HIGH
     off = GPIO.LOW
+else:
+    on = 'ignore'
+    off = 'ignore'
 
 
 class TrafficLight:

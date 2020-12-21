@@ -14,6 +14,9 @@ class FakeTrafficLight:
 
     def display_error(self, error):
         self.__print(error)
+    
+    def flash_all(self):
+        self.__print('Flash all')
 
     def __print(self, msg):
         print_message('FakeTrafficLight: ' + msg)
